@@ -1,2 +1,3 @@
 # vihaan30g.github.io
-Personal portfolio and project hub
+
+Personal portfolio. Content lives in `data/`, images in `images/` (see `images/README.md`).
