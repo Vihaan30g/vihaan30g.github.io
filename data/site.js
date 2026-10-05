@@ -4,8 +4,8 @@ const SITE = {
   role: "Robotics Software Engineer",
   tagline: "Building AI and computer vision for robots that work in the physical world.",
   status: "B.Tech CSE, Year 3, IIITDM Kancheepuram",
-  heroTags: ["ROS 2", "MoveIt2", "Manipulation", "Perception", "Jetson AGX Orin", "C++ / Python"],
   // Photo: save your picture as images/hero/me.jpg (square works best)
+  contactText: "Open to internships and research collaborations in Computer Vision, AI/ML, and Robotics.",
   email: "vihaan30g@gmail.com",
   phone: "+91 93999 29308",
   links: {
