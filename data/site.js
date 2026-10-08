@@ -12,7 +12,7 @@ const SITE = {
     github: "https://github.com/Vihaan30g",
     linkedin: "https://www.linkedin.com/in/vihaan-gupta-ab046836b/",
     youtube: "",                       // leave empty to hide
-    resume: "https://vihaan30g.github.io/resume-website/index.html"
+    resume: "https://github.com/Vihaan30g/vihaan30g.github.io/blob/main/resume/index.html"
   },
   // Base address of your project pages. Each project page = base + repo name + "/"
   pagesBase: "https://vihaan30g.github.io/",
