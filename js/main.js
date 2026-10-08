@@ -27,8 +27,9 @@
   }
 
   function build() {
-    var L = S.links, nav = [["about", "About"], ["skills", "Skills"], ["projects", "Projects"], ["achievements", "Achievements"], ["certificates", "Certificates"], ["contact", "Contact"]];
-    $("#nav").innerHTML = nav.map(function (n) { return '<a href="#' + n[0] + '">' + n[1] + "</a>"; }).join("");
+    var L = S.links, nav = [["about", "About"], ["achievements", "Achievements"], ["skills", "Skills"], ["projects", "Projects"], ["certificates", "Certificates"], ["contact", "Contact"]];
+    $("#nav").innerHTML = nav.map(function (n) { return '<a href="#' + n[0] + '">' + n[1] + "</a>"; }).join("") +
+      (L.resume ? '<a class="res" href="' + L.resume + '">Resume</a>' : "");
 
     var cur = S.currently.map(function (c) {
       var inner = "<b>" + (c.active ? "Active build" : "In progress") + "</b><h3>" + esc(c.title) + "</h3><p>" + esc(c.text) + "</p>";
@@ -57,16 +58,17 @@
       '<section id="about"><h2>About</h2><div class="about"><div>' + S.about.map(function (t) { return "<p>" + esc(t) + "</p>"; }).join("") +
       '</div><div class="facts">' + facts("Education", S.education) + facts("Experience", S.experience) + "<h3>Languages</h3><div>" + esc(S.languages.join(", ")) + "</div></div></div></section>" +
 
+      '<section id="achievements"><h2>Achievements</h2>' + ach + "</section>" +
+
       '<section id="skills"><h2>Skills</h2><div class="skills">' + pills(S.skills) + '</div><div class="sec3"><div><h3>Hardware</h3><div class="skills">' + pills(S.hardware) +
       '</div></div><div><h3>Robots worked on</h3><div class="skills">' + pills(S.robots) + "</div></div></div></section>" +
-
-      '<section id="current"><h2>Currently working on</h2><div class="cur">' + cur + "</div></section>" +
 
       '<section id="projects"><h2>Projects</h2><div class="filt" id="filt">' +
       ["all"].concat(["completed", "ongoing", "upcoming"].filter(function (s) { return PROJECTS.some(function (p) { return p.status === s; }); })).map(function (f) { return '<button class="btn" data-f="' + f + '" aria-pressed="' + (f === "all") + '">' + (f === "all" ? "All" : STAT[f]) + "</button>"; }).join("") +
       '</div><div class="grid" id="grid"></div></section>' +
 
-      '<section id="achievements"><h2>Achievements</h2>' + ach + "</section>" +
+      '<section id="current"><h2>Currently working on</h2><div class="cur">' + cur + "</div></section>" +
+
       '<section id="certificates"><h2>Certificates</h2><div class="certs">' + certs + "</div></section>" +
       '<section id="contact" class="contact"><h2>Contact</h2><p class="sub">' + esc(S.contactText) + "</p>" + btns +
       '<p class="sub" style="margin-top:10px">' + esc(S.phone) + "</p></section></div>";

@@ -91,6 +91,8 @@ footer{padding:26px 22px;text-align:center;color:var(--mut);font-size:14px;borde
 nav a{border-bottom:2px solid transparent;padding:2px 0}
 nav a:hover{color:var(--fg);border-bottom-color:var(--acc)}
 .brand:hover{color:var(--acc)}
+nav a.res{border:1px solid var(--acc);border-radius:99px;padding:3px 16px;color:var(--acc);font-weight:600}
+nav a.res:hover{background:var(--acc);color:#fff;border-color:var(--acc);box-shadow:0 4px 14px rgba(19,32,26,.2)}
 .card{position:relative}
 .card:hover,.cur a.box:hover,.ach:hover,.ach:focus-visible,.cert:has(img):hover{border-color:var(--acc);box-shadow:0 10px 28px rgba(19,32,26,.15)}
 .card:hover .body h3 a{color:var(--acc)}
